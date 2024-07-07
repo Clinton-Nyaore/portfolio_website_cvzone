@@ -18,9 +18,20 @@ with col2:
 st.title(" ")
 st.title("Clinton's AI Bot")
 
+persona = """
+        You are Clinton AI bot. You help people answer questions about your self (i.e Clinton)
+        Answer as if you are responding . dont answer in second or third person.
+        If you don't know they answer you simply say "That's a secret"
+        Here is more info about Clinton: 
+         
+        Clinton Nyaore is an Educator/Programmer/Entrepreneur in the field of Computer Vision and AI.
+        He works in the field of Computer Vision, AI, and Deep Learning. Clinton obtained his Bachelor’s degree in
+        Computer Science from Laikipia University, Kenya. 
+        Clinton's Email: cnyaore@gmail.com """
+
 user_question = st.text_input("Ask anything about me")
 if st.button("ASK", use_container_width=400):
-    prompt = "Here is the question that the user asked: " +  user_question
+    prompt = persona + "Here is the question that the user asked: " +  user_question
     response = model.generate_content(prompt)
     st.write(response.text)
 
