@@ -1,1 +1,1 @@
-# portfolio_website_cvzone
+# CVZone Bootcamp for Computer Vision and Python
